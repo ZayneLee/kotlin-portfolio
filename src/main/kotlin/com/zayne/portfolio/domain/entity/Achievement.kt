@@ -1,14 +1,11 @@
 package com.zayne.portfolio.domain.entity
 
-import jakarta.persistence.Column
-import jakarta.persistence.Entity
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.GenerationType
-import jakarta.persistence.Id
+import jakarta.persistence.*
 import java.time.LocalDate
 
 @Entity
-class Achievement(title: String, description: String, achieveDate: LocalDate?, host: String, isActive: Boolean) : BaseEntity() {
+class Achievement(title: String, description: String, achievedDate: LocalDate?, host: String, isActive: Boolean) :
+    BaseEntity() {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,7 +17,7 @@ class Achievement(title: String, description: String, achieveDate: LocalDate?, h
 
     var description: String = description
 
-    var achieveDate: LocalDate? = achieveDate
+    var achievedDated: LocalDate? = achievedDate
 
     var host: String = host
 
