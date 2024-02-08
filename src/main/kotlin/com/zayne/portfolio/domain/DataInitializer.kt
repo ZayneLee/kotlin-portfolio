@@ -205,7 +205,7 @@ class DataInitializer(
 
         val project1 = Project(
             name = "Plant Quarantine Information Management System Project",
-            description = "Participated in Sri Lanka agricultural export and import quarantine project jointly conducted by UN-affiliated UNOPS (United Nations Project Procurement Agency), KOICA (Korea International Cooperation Agency), and JAICA (Japan International Cooperation Agency)",
+            description = "Participated in Sri Lanka agricultural export and import quarantine project jointly conducted by UN-affiliated UNOPS",
             startYear = 2022,
             startMonth = 10,
             endYear = 2023,
