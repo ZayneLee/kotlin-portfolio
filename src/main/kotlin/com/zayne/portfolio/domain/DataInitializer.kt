@@ -106,6 +106,10 @@ class DataInitializer(
                 ExperienceDetail(
                     content = "Front-end development using React and TypeScript for a seamless user experience",
                     isActive = true
+                ),
+                ExperienceDetail(
+                    content = "Strong communication skills, including fluent English proficiency",
+                    isActive = true
                 )
             )
         )
