@@ -7,10 +7,18 @@ import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
 
 @Entity
-class Instruction : BaseEntity() {
+class Instruction(
+    content: String,
+    isActive: Boolean
+) : BaseEntity() {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "instruction_id")
+
     var id: Long? = null
+
+    var content: String = content
+
+    var isActive: Boolean = isActive
 }
