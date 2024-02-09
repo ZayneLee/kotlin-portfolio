@@ -17,7 +17,7 @@ class Achievement(title: String, description: String, achievedDate: LocalDate?, 
 
     var description: String = description
 
-    var achievedDated: LocalDate? = achievedDate
+    var achievedDate: LocalDate? = achievedDate
 
     var host: String = host
 
