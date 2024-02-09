@@ -94,7 +94,9 @@ class ProjectRepositoryTest(
         assertThat(projects).hasSize(DATA_SIZE)
         for (project in projects) {
             assertThat(project.details).hasSize(project.name.toInt())
+            println("project.details.size: ${project.details.size}")
             assertThat(project.skills).hasSize(project.name.toInt())
+            println("project.skills.size: ${project.skills.size}")
         }
         println("----- FindAllByIsActive test end -----")
     }
