@@ -243,7 +243,7 @@ class DataInitializer(
 
         val project2 = Project(
             name = "Zayne's Portfolio",
-            description = "Crafted my own portfolio using React",
+            description = "Crafted by SeongDo Lee | React & Responsive Web Design | 2023",
             startYear = 2022,
             startMonth = 12,
             endYear = null,
