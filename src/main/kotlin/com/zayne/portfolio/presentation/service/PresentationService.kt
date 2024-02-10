@@ -14,7 +14,7 @@ class PresentationService(
 ) {
 
     @Transactional(readOnly = true)
-    fun getIntroduction(): List<IntroductionDTO> {
+    fun getIntroductions(): List<IntroductionDTO> {
         val introductions = presentationRepository.getActiveIntroductions()
 
         return introductions.map { IntroductionDTO(it) }
