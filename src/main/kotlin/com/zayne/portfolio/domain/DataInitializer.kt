@@ -222,12 +222,12 @@ class DataInitializer(
         project1.addDetails(
             mutableListOf(
                 ProjectDetail(
-                    content = "Specializing in backend infrastructure and RESTful API design",
+                    content = " Specializing in backend infrastructure and RESTful API design",
                     url = null,
                     isActive = true
                 ),
                 ProjectDetail(
-                    content = "Front-end development using React and TypeScript for a seamless user experience",
+                    content = " Front-end development using React and TypeScript for a seamless user experience",
                     url = null,
                     isActive = true
                 )
@@ -249,8 +249,8 @@ class DataInitializer(
             description = "Crafted by SeongDo Lee | React & Responsive Web Design | 2023",
             startYear = 2022,
             startMonth = 12,
-            endYear = null,
-            endMonth = null,
+            endYear = 2024,
+            endMonth = 2,
             isActive = true
         )
 
@@ -269,6 +269,32 @@ class DataInitializer(
                 ProjectSkill(project = project2, skill = react)
             )
         )
-        projectRepository.saveAll(mutableListOf(project1, project2))
+
+        val project3 = Project(
+            name = "Emotion Diary",
+            description = "Crafted by SeongDo Lee | React & Responsive Web Design | 2023",
+            startYear = 2022,
+            startMonth = 12,
+            endYear = 2023,
+            endMonth = 3,
+            isActive = true
+        )
+
+        project3.addDetails(
+            mutableListOf(
+                ProjectDetail(
+                    content = "Emotion Diary Website",
+                    url = "https://zayne-emotiondiary-project.web.app/",
+                    isActive = true
+                )
+            )
+        )
+
+        project3.skills.addAll(
+            mutableListOf(
+                ProjectSkill(project = project3, skill = react)
+            )
+        )
+        projectRepository.saveAll(mutableListOf(project1, project2, project3))
     }
 }
