@@ -79,13 +79,13 @@ class DataInitializer(
         )
         experience1.addDetails(
             mutableListOf(
-                ExperienceDetail(content = "GPA 3.8/4.5", isActive = true)
+                ExperienceDetail(content = " GPA 3.8/4.5", isActive = true)
             )
         )
 
         val experience2 = Experience(
             title = "Ezfarm Inc.",
-            description = "development team, Full-Stack developer",
+            description = "Full-Stack developer, Development team",
             startYear = 2022,
             startMonth = 10,
             endYear = 2023,
@@ -96,19 +96,19 @@ class DataInitializer(
         experience2.addDetails(
             mutableListOf(
                 ExperienceDetail(
-                    content = "Full-stack development, specializing in backend infrastructure and RESTful API design",
+                    content = " Full-stack development, specializing in backend infrastructure and RESTful API design",
                     isActive = true
                 ),
                 ExperienceDetail(
-                    content = "Proficient in utilizing Spring Security for secure member registration processes",
+                    content = " Proficient in utilizing Spring Security for secure member registration processes",
                     isActive = true
                 ),
                 ExperienceDetail(
-                    content = "Front-end development using React and TypeScript for a seamless user experience",
+                    content = " Front-end development using React and TypeScript for a seamless user experience",
                     isActive = true
                 ),
                 ExperienceDetail(
-                    content = "Strong communication skills, including fluent English proficiency",
+                    content = " Strong communication skills, including fluent English proficiency",
                     isActive = true
                 )
             )
@@ -116,7 +116,7 @@ class DataInitializer(
 
         val experience3 = Experience(
             title = "Soonchunhyang University Hospital",
-            description = "IT Service team, Full-Stack developer",
+            description = "Full-Stack developer, IT Service team",
             startYear = 2021,
             startMonth = 7,
             endYear = 2022,
@@ -127,15 +127,15 @@ class DataInitializer(
         experience3.addDetails(
             mutableListOf(
                 ExperienceDetail(
-                    content = "Extensive experience in troubleshooting application issues within Oracle databases, ensuring uninterrupted hospital operations",
+                    content = " Extensive experience in troubleshooting application issues within Oracle databases, ensuring uninterrupted hospital operations",
                     isActive = true
                 ),
                 ExperienceDetail(
-                    content = "In-depth knowledge of IT service management principles with a focus on optimizing healthcare IT infrastructure",
+                    content = " In-depth knowledge of IT service management principles with a focus on optimizing healthcare IT infrastructure",
                     isActive = true
                 ),
                 ExperienceDetail(
-                    content = "Strong analytical and problem-solving skills, consistently delivering timely and effective solutions to complex issues",
+                    content = " Strong analytical and problem-solving skills, consistently delivering timely and effective solutions to complex issues",
                     isActive = true
                 )
             )
@@ -143,7 +143,7 @@ class DataInitializer(
 
         val experience4 = Experience(
             title = "Trinion",
-            description = "development team, Full-Stack developer",
+            description = "Full-Stack developer, Development team",
             startYear = 2020,
             startMonth = 6,
             endYear = 2021,
@@ -154,15 +154,15 @@ class DataInitializer(
         experience4.addDetails(
             mutableListOf(
                 ExperienceDetail(
-                    content = "Customer support and issue resolution with a commitment to timely and effective solutions",
+                    content = " Customer support and issue resolution with a commitment to timely and effective solutions",
                     isActive = true
                 ),
                 ExperienceDetail(
-                    content = "Expertise in designing and implementing member management systems using the Spring Framework",
+                    content = " Expertise in designing and implementing member management systems using the Spring Framework",
                     isActive = true
                 ),
                 ExperienceDetail(
-                    content = "Strong analytical and problem-solving skills, consistently delivering timely and effective solutions to complex issues",
+                    content = " Strong analytical and problem-solving skills, consistently delivering timely and effective solutions to complex issues",
                     isActive = true
                 )
             )
@@ -170,7 +170,7 @@ class DataInitializer(
 
         val experience5 = Experience(
             title = "Atec Group",
-            description = "LG CNS team, Unix Linux System Administrator",
+            description = "Unix Linux System Administrator, LG CNS",
             startYear = 2019,
             startMonth = 10,
             endYear = 2020,
@@ -181,11 +181,11 @@ class DataInitializer(
         experience5.addDetails(
             mutableListOf(
                 ExperienceDetail(
-                    content = "Proficient in monitoring server traffic to optimize performance and identify potential issues",
+                    content = " Proficient in monitoring server traffic to optimize performance and identify potential issues",
                     isActive = true
                 ),
                 ExperienceDetail(
-                    content = "Extensive experience in managing x86 servers, ensuring hardware integrity and operational efficiency",
+                    content = " Extensive experience in managing x86 servers, ensuring hardware integrity and operational efficiency",
                     isActive = true
                 )
             )
@@ -196,14 +196,17 @@ class DataInitializer(
         val java = Skill(name = "Java", type = SkillType.LANGUAGE.name, isActive = true)
         val kotlin = Skill(name = "Kotlin", type = SkillType.LANGUAGE.name, isActive = true)
         val react = Skill(name = "React", type = SkillType.LANGUAGE.name, isActive = true)
-        val typescript = Skill(name = "TypeScript", type = SkillType.FRAMEWORK.name, isActive = true)
+        val typescript = Skill(name = "TypeScript", type = SkillType.LANGUAGE.name, isActive = true)
         val spring = Skill(name = "Spring", type = SkillType.FRAMEWORK.name, isActive = true)
         val oracle = Skill(name = "Oracle", type = SkillType.DATABASE.name, isActive = true)
         val mysql = Skill(name = "MySQL", type = SkillType.DATABASE.name, isActive = true)
-        val docker = Skill(name = "Docker", type = SkillType.DATABASE.name, isActive = true)
+        val docker = Skill(name = "Docker", type = SkillType.TOOL.name, isActive = true)
+        val eclipse = Skill(name = "Eclipse", type = SkillType.TOOL.name, isActive = true)
+        val vscode = Skill(name = "Visual Studio", type = SkillType.TOOL.name, isActive = true)
+        val intellij = Skill(name = "Intellij", type = SkillType.TOOL.name, isActive = true)
         skillRepository.saveAll(
             mutableListOf(
-                java, kotlin, react, typescript, spring, oracle, mysql, docker
+                java, kotlin, react, typescript, spring, oracle, mysql, docker, eclipse, vscode, intellij
             )
         )
 
