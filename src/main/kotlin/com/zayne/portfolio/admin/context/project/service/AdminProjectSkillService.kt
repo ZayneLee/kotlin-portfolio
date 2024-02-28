@@ -1,5 +1,6 @@
 package com.zayne.portfolio.admin.context.project.service
 
+import com.zayne.portfolio.admin.context.project.form.ProjectSkillForm
 import com.zayne.portfolio.admin.data.TableDTO
 import com.zayne.portfolio.admin.exception.AdminBadRequestException
 import com.zayne.portfolio.admin.exception.AdminInternalServerErrorException
@@ -43,5 +44,28 @@ class AdminProjectSkillService(
     fun getSkillList(): List<String> {
         val skills = skillRepository.findAll()
         return skills.map { "${it.id} (${it.name})" }.toList()
+    }
+
+    @Transactional
+    fun save(form: ProjectSkillForm) {
+        val projectId = parseId(form.project)
+        val skillId = parseId(form.skill)
+        projectSkillRepository.findByProjectIdAndSkillId(projectId, skillId).ifPresent { throw AdminBadRequestException("Already existed") }
+        val project = projectRepository.findById(projectId).orElseThrow { throw AdminBadRequestException("Can't find ${projectId}") }
+        val skill = skillRepository.findById(skillId).orElseThrow { throw AdminBadRequestException("Can't find ${skillId}") }
+        val projectSkill = ProjectSkill(project = project, skill = skill)
+        project.skills.add(projectSkill)
+    }
+
+    private fun parseId(line: String): Long {
+        try {
+            val endIndex = line.indexOf(" ") - 1
+            val id = line.slice(0..endIndex).toLong()
+            return id
+        } catch (e: Exception) {
+            throw AdminInternalServerErrorException("There is an error") }
+    }
+    fun deleteProjectSkill(id: Long) {
+        projectSkillRepository.deleteById(id)
     }
 }
